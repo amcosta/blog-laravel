@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/authors', 'AuthorController@index')->name('author-index');
+Route::get('/author/new', 'AuthorController@create')->name('author-create');
+Route::post('/author/store', 'AuthorController@store')->name('author-store');
